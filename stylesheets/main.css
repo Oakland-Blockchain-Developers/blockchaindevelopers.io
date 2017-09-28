@@ -4668,17 +4668,11 @@
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 .team-profile {
 	text-align: center;
-}
-
-.team-profile img {
-	border: 2px solid white;
-	width: 260px;
-	height: 200px;
 }
 
 .social_media img {
