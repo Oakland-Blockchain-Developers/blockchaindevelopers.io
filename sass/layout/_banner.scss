@@ -1,0 +1,100 @@
+/*
+	Atmosphere by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Banner */
+
+	#banner {
+		@include vendor('background-image', (
+			'linear-gradient(to top, #{transparentize(_palette(bg-alt), 0.1)}, #{transparentize(_palette(bg-alt), 0.1)})',
+			'url("../../images/banner.jpg")'
+		));
+		background-attachment: fixed;
+		background-position: center center;
+		background-size: cover;
+		color: #fff;
+		padding: 16em 3em;
+		position: relative;
+		text-align: center;
+
+		h1 {
+			color: inherit;
+			font-size: 3.2em;
+			margin: 0 0 0.65em 0;
+			padding: 0;
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: 1.75em;
+			margin-bottom: 0.75em;
+		}
+
+		.button {
+			min-width: 14em;
+		}
+
+		> .inner {
+			@include vendor('transition', (
+				'opacity 1s ease-in-out',
+				'transform 1s ease-in-out'
+			));
+			opacity: 1;
+			position: relative;
+			z-index: 1;
+		}
+
+		&:after {
+			@include vendor('transition', 'opacity 1s ease-in-out');
+			@include vendor('pointer-events', 'none');
+			content: '';
+			display: block;
+			background-color: desaturate(darken(_palette(bg-alt), 10), 5);
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		body.is-loading & {
+			.inner {
+				@include vendor('transform', 'translateY(1em)');
+				opacity: 0;
+			}
+
+			&:after {
+				opacity: 1;
+			}
+		}
+
+		@include breakpoint(large) {
+			background-attachment: scroll;
+			padding: 16em 3em;
+		}
+
+		@include breakpoint(medium) {
+			h1 {
+				font-size: 2.8em;
+			}
+		}
+
+		@include breakpoint(small) {
+			padding: 8em 2em;
+
+			h1 {
+				font-size: 2.25em;
+			}
+
+			p {
+				font-size: 1.25em;
+			}
+		}
+
+		@include breakpoint(xxsmall) {
+			padding: 6em 2em;
+		}
+	}

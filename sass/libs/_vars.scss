@@ -1,0 +1,64 @@
+// Misc.
+	$misc: (
+		z-index-base:		10000
+	);
+
+// Duration.
+	$duration: (
+		menu:				0.5s,
+		transition:			0.2s
+	);
+
+// Size.
+	$size: (
+		border-radius:		4px,
+		border-width:		1px,
+		element-height:		3em,
+		element-margin:		2em
+	);
+
+// Font.
+	$font: (
+		family:				('Quicksand', Helvetica, sans-serif),
+		family-fixed:		('Courier New', monospace),
+		weight:				400,
+		weight-bold:		700,
+	);
+
+// Palette.
+	$palette: (
+		bg:					#fff,
+		bg-alt:				#2b5a96,
+		fg:					#637485,
+		fg-bold:			#637485,
+		fg-light:			#bbb,
+		border:				rgba(#637485,0.25),
+		border-bg:			rgba(#637485,0.075),
+		border2:			rgba(#637485,0.4),
+		border2-bg:			rgba(#637485,0.075),
+		highlight:			accent1,
+
+		accent1: (
+			bg:				#39a288,
+			fg:				#ffffff,
+			fg-bold:		#ffffff,
+			fg-light:		rgba(#ffffff, 0.75),
+			border:			rgba(255,255,255,0.25),
+			border-bg:		rgba(255,255,255,0.065),
+			border2:		rgba(0,0,0,0.25),
+			border2-bg:		rgba(0,0,0,0.065),
+			highlight:		accent1
+		),
+
+		accent2: (
+			bg:				#f5f8fa,
+			fg:				#637485,
+			fg-bold:		#637485,
+			fg-light:		#bbb,
+			border:			rgba(#637485,0.25),
+			border-bg:		rgba(#637485,0.075),
+			border2:		rgba(#637485,0.4),
+			border2-bg:		rgba(#637485,0.075),
+			highlight:		accent1
+		)
+	);

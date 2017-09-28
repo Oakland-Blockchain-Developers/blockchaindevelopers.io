@@ -1,0 +1,33 @@
+/*
+	Atmosphere by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		border: solid 1px #637485;
+	}
+
+		input[type="submit"].special,
+		input[type="reset"].special,
+		input[type="button"].special,
+		button.special,
+		.button.special {
+			border: 0;
+		}
+
+/* Footer */
+
+	#footer input[type="submit"],
+	#footer input[type="reset"],
+	#footer input[type="button"],
+	#footer button,
+	#footer .button {
+		border: solid 1px #ffffff;
+	}

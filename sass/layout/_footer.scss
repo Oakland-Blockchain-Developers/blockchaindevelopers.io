@@ -1,0 +1,175 @@
+/*
+	Atmosphere by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Footer */
+
+	#footer {
+		@include vendor('background-image', (
+			'linear-gradient(to top, #{transparentize(_palette(bg-alt), 0.1)}, #{transparentize(_palette(bg-alt), 0.1)})',
+			'url("../../images/banner.jpg")'
+		));
+		background-attachment: fixed;
+		background-position: center center;
+		background-size: cover;
+		padding: 12em 0 2em;
+
+		> .inner {
+			@include vendor('display', 'flex');
+			margin: 0 auto (_size(element-margin) * 1.5);
+			max-width: 75em;
+			width: calc(100% - 4em);
+		}
+
+		.contact {
+			@include padding(4em, 2.5em);
+			background-color: #fff;
+			list-style-type: none;
+			margin-bottom: 0;
+			width: 35%;
+
+			li {
+				margin-bottom: _size(element-margin);
+				padding-bottom: _size(element-margin);
+				padding-left: 4em;
+				position: relative;
+
+				strong {
+					color: _palette(accent1, bg);
+					display: block;
+					margin-bottom: 0.5em;
+					text-transform: uppercase;
+				}
+
+				&.icon:before {
+					color: _palette(border);
+					position: absolute;
+					left: 0;
+					top: -0.15em;
+					font-size: 1.5em;
+				}
+
+				&:after {
+					background-color: _palette(border);
+					bottom: 0;
+					content: '';
+					height: 1px;
+					left: -4em;
+					position: absolute;
+					width: 8em;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+
+		form {
+			@include color(accent1);
+			@include padding(4em, 3.5em);
+			@include vendor('flex-grow', '1');
+			margin-bottom: 0;
+
+			h4 {
+				font-weight: _font(weight-bold);
+				margin-bottom: _size(element-margin);
+				text-transform: uppercase;
+			}
+
+			label {
+				@include sr-only;
+			}
+		}
+
+		.copyright {
+			color: _palette(fg-light);
+			margin-bottom: (_size(element-margin) * 1.5);
+			padding: 0;
+			text-align: center;
+
+			li {
+				border-left: solid _size(border-width) _palette(border);
+				display: inline-block;
+				list-style: none;
+				margin-left: 1.5em;
+				padding-left: 1.5em;
+
+				&:first-child {
+					border-left: 0;
+					margin-left: 0;
+					padding-left: 0;
+				}
+			}
+		}
+
+		@include breakpoint(large) {
+			background-attachment: scroll;
+		}
+
+		@include breakpoint(medium) {
+			padding-top: 10em;
+
+			.contact {
+				@include padding(2em, 2em);
+				width: 45%;
+
+				li {
+					padding-left: 3em;
+				}
+			}
+
+			form {
+				@include padding(2em, 2em);
+				width: 55%;
+			}
+		}
+
+		@include breakpoint(small) {
+			padding-top: 7em;
+
+			> .inner {
+				@include vendor('flex-wrap', 'wrap');
+				width: calc(100% - 3em);
+			}
+
+			.contact {
+				width: 100%;
+			}
+
+			form {
+				width: 100%;
+			}
+
+			.copyright {
+				margin-bottom: _size(element-margin);
+
+				li {
+					display: block;
+					border-left: 0;
+					margin-left: 0;
+					padding-left: 0;
+				}
+			}
+		}
+
+		@include breakpoint(xsmall) {
+			.contact {
+				@include padding(2em, 1.5em);
+
+				li {
+					padding-left: 2.5em;
+				}
+			}
+
+			form {
+				@include padding(2em, 1.5em);
+			}
+		}
+	}

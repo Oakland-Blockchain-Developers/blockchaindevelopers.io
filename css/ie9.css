@@ -1,0 +1,149 @@
+/*
+	Atmosphere by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Spotlights */
+
+	.spotlights article {
+		float: left;
+	}
+
+	.spotlights:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+/* Features */
+
+	.features li {
+		float: left;
+	}
+
+	.features:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+/* Posts */
+
+	.posts article {
+		margin-top: 2em;
+	}
+
+		.posts article .image {
+			float: right;
+			width: 60%;
+		}
+
+		.posts article .content {
+			float: left;
+			width: 35%;
+		}
+
+		.posts article:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+/* Timeline */
+
+	.timeline > section > * {
+		float: left;
+	}
+
+	.timeline > section:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.timeline .image {
+		width: 25%;
+	}
+
+	.timeline .content {
+		width: 30%;
+	}
+
+/* Header */
+
+	#header {
+		text-align: right;
+	}
+
+		#header > .logo {
+			position: absolute;
+			top: 1em;
+			left: 1em;
+			padding: 0.5em;
+		}
+
+		#header > a {
+			display: inline-block;
+		}
+
+		#header.alt > .logo {
+			padding: 1em;
+		}
+
+/* Banner */
+
+	#banner {
+		background-image: url("../../images/banner.jpg");
+	}
+
+		#banner:after {
+			background-color: #2b5a96;
+			opacity: 0.9;
+		}
+
+/* Footer */
+
+	#footer {
+		background-image: url("../../images/banner.jpg");
+		position: relative;
+	}
+
+		#footer > .inner {
+			position: relative;
+			z-index: 1;
+		}
+
+			#footer > .inner > .contact {
+				float: left;
+				width: 35%;
+			}
+
+			#footer > .inner form {
+				float: left;
+				width: 65%;
+			}
+
+			#footer > .inner:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+		#footer:after {
+			content: '';
+			display: block;
+			background-color: #2b5a96;
+			opacity: 0.9;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+/* Menu */
+
+	#menu .inner {
+		margin: 6em auto 0 auto;
+	}

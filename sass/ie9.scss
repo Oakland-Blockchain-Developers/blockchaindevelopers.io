@@ -1,0 +1,172 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+/*
+	Atmosphere by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Spotlights */
+
+	.spotlights {
+		article {
+			float: left;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+
+/* Features */
+
+	.features {
+		li {
+			float: left;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+
+/* Posts */
+
+	.posts {
+		article {
+			margin-top: 2em;
+
+			.image {
+				float: right;
+				width: 60%;
+			}
+
+			.content {
+				float: left;
+				width: 35%;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+		}
+	}
+
+/* Timeline */
+
+	.timeline {
+		> section {
+			> * {
+				float: left;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+		}
+
+		.image {
+			width: 25%;
+		}
+
+		.content {
+			width: 30%;
+		}
+	}
+
+/* Header */
+
+	#header {
+		text-align: right;
+
+		> .logo {
+			position: absolute;
+			top: 1em;
+			left: 1em;
+			padding: 0.5em;
+		}
+
+		> a {
+			display: inline-block;
+		}
+
+		&.alt {
+			> .logo {
+				padding: 1em;
+			}
+		}
+	}
+
+/* Banner */
+
+	#banner {
+		@include vendor('background-image', (
+			'url("../../images/banner.jpg")'
+		));
+
+		&:after {
+			background-color: _palette(bg-alt);
+			opacity: 0.9;
+		}
+	}
+
+/* Footer */
+
+	#footer {
+		@include vendor('background-image', (
+			'url("../../images/banner.jpg")'
+		));
+		position: relative;
+
+		> .inner {
+			position: relative;
+			z-index: 1;
+
+			> .contact {
+				float: left;
+				width: 35%;
+			}
+
+			form {
+				float: left;
+				width: 65%;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			background-color: _palette(bg-alt);
+			opacity: 0.9;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+/* Menu */
+
+	#menu {
+		.inner {
+			margin: 6em auto 0 auto;
+		}
+	}

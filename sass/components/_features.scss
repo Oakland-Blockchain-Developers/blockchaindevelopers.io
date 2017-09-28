@@ -1,0 +1,58 @@
+/*
+	Atmosphere by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Features */
+
+	.features {
+		@include vendor('display', 'flex');
+		@include vendor('flex-wrap', 'wrap');
+		@include vendor('justify-content', 'center');
+		list-style-type: none;
+		padding-left: 0;
+
+		li {
+			margin-bottom: _size(element-margin);
+			padding: 0 1em;
+			width: 25%;
+		}
+
+		.icon {
+			border-radius: 100%;
+			box-shadow: -0.5em 0.5em 1em rgba(#000, 0.05);
+			display: block;
+			font-size: 2.75em;
+			height: 3.75em;
+			line-height: 3.75em;
+			margin: 0 auto (_size(element-margin) * 0.35);
+			text-align: center;
+			width: 3.75em;
+		}
+
+		h4 {
+			font-weight: _font(weight-bold);
+			margin-bottom: 0.5em;
+			text-transform: uppercase;
+		}
+
+		@include breakpoint(medium) {
+			li {
+				width: 50%;
+			}
+		}
+
+		@include breakpoint(small) {
+			.icon {
+				font-size: 2em;
+			}
+		}
+
+		@include breakpoint(xsmall) {
+			li {
+				margin-bottom: (_size(element-margin) * 0.5);
+				width: 100%;
+			}
+		}
+	}
