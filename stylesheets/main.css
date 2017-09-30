@@ -4664,15 +4664,18 @@
 			}
 
 		}
+
 .team-container {
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	align-items: center;
+	justify-content: center;
 }
 
 .team-profile {
 	text-align: center;
+	max-width: 100%;
 }
 
 .social_media img {
